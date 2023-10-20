@@ -8,10 +8,7 @@
     "provision": "apt-get update -y && apt-get install dnsmasq hostapd iw -y",
     "bootstrap": "wget http://treebeard.home.net:1234/bootstrap/pifi-conf -O bootstrap.sh && chmod u+x bootstrap.sh && ./bootstrap.sh"
   },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/sabhiram/raspberry-wifi-conf.git"
-  },
+
   "keywords": [
     "RaspberryPi",
     "Node",
