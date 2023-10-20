@@ -1,5 +1,7 @@
 # raspberry-wifi-conf
 
+test change here 20 oct
+
 A Node application which makes connecting your RaspberryPi to your home wifi easier.
 
 Tested on Stretch and Raspberrt Pi 3
