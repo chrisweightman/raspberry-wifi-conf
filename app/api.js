@@ -4,6 +4,7 @@ var path       = require("path"),
     express    = require("express"),
     bodyParser = require('body-parser'),
     config     = require("../config.json"),
+    forceReconf         = require("/home/pi/webapp/public/config.json"),
     http_test  = config.http_test_only;
 
 // Helper function to log errors and send a generic status "SUCCESS"

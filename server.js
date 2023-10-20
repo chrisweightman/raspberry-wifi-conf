@@ -1,7 +1,8 @@
 var async               = require("async"),
     wifi_manager        = require("./app/wifi_manager")(),
     dependency_manager  = require("./app/dependency_manager")(),
-    config              = require("./config.json");
+    config              = require("./config.json"),
+    forceReconf         = require("/home/pi/webapp/public/config.json");
 
 /*****************************************************************************\
     1. Check for dependencies
@@ -37,7 +38,7 @@ async.series([
 			
             if (result_ip) {
                 console.log("\nWifi is enabled.");
-                var reconfigure = config.access_point.force_reconfigure || false;
+                var reconfigure = forceReconf.wifiReconfig || false;
                 if (reconfigure) {
                     console.log("\nForce reconfigure enabled - try to enable access point");
                 } else {
