@@ -2,7 +2,8 @@ var _       = require("underscore")._,
     async   = require("async"),
     fs      = require("fs"),
     exec    = require("child_process").exec,
-    config  = require("../config.json");
+    config  = require("../config.json"),
+    forceReconf         = require("/home/pi/webapp/public/config.json");
 
 // Better template format
 _.templateSettings = {
@@ -164,10 +165,10 @@ module.exports = function() {
                 return callback(error);
             }
 
-            if (result_addr && !config.access_point.force_reconfigure) {
+            if (result_addr && !forceReconf.wifiReconfig) {
                 console.log("\nAccess point is enabled with ADDR: " + result_addr);
                 return callback(null);
-            } else if (config.access_point.force_reconfigure) {
+            } else if (forceReconf.wifiReconfig) {
                 console.log("\nForce reconfigure enabled - reset AP");
             } else {
                 console.log("\nAP is not enabled yet... enabling...");

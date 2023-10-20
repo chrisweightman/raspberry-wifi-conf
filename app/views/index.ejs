@@ -10,13 +10,15 @@
 
     <link rel="stylesheet" href="/external/font-awesome/css/font-awesome.min.css" >
     <link rel="stylesheet" href="/app.css">
+    
 </head>
 
-
+<body><p></p><a href="/" onclick="event.target.port=3000">Return to tally main config</a> </body>
 <body ng-controller = "AppController"
       ng-keyup      = "$event.keyCode == 27 ? change_selection(null) : ''">
 
     <div class = "page-header">
+        
         <i class = "fa fa-wifi"></i> Choose a Wifi Ap
         <a href = "#" ng-click = "rescan()" ng-class = "{ 'active': scan_running }">
             <i class = "fa fa-refresh"

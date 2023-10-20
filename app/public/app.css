@@ -1,6 +1,9 @@
 html, body {
     margin: 0; padding: 0;
-    font-family: "Roboto", "PT Sans", sans-serif;
+    /* font-family: "Roboto", "PT Sans", sans-serif; */
+    font-family: monospace; /*added*/
+     background-color: black; /*added*/
+     color: white; /*added*/
     height: 100%; min-height: 100%;
     overflow: hidden;
     position: relative;
@@ -246,3 +249,22 @@ html, body {
 .btn-ok:hover {
     background: #22ff22;
 }
+/* all below is added from tally app css */
+a:link {
+    color: red;
+  }
+  
+  /* visited link */
+  a:visited {
+    color: green;
+  }
+  
+  /* mouse over link */
+  a:hover {
+    color: hotpink;
+  }
+  
+  /* selected link */
+  a:active {
+    color: blue;
+  }
